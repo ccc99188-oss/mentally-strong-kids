@@ -168,7 +168,7 @@ details.group[open] > summary { border-bottom: 1px dashed var(--line); }
 /* Gallery */
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
 .gallery button { border: 0; padding: 0; background: none; cursor: zoom-in; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 18px -10px rgba(30,40,25,.4); }
-.gallery img { display: block; width: 100%; aspect-ratio: 935 / 1663; object-fit: cover; }
+.gallery img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
 .lightbox {
   position: fixed; inset: 0; z-index: 20; background: rgba(15,20,14,.88);
   display: flex; align-items: center; justify-content: center;
@@ -278,7 +278,7 @@ footer .motto { font-family: var(--serif); color: var(--sage); letter-spacing: .
   <section class="wrap" id="cards">
     <div class="sec-head">
       <h2>圖卡版</h2>
-      <p>同一份清單的 10 張圖卡，點開可放大。手機上長按圖片即可儲存或轉傳。</p>
+      <p>同一份清單的封面與 15 張圖卡，點開可放大。手機上長按圖片即可儲存或轉傳。</p>
     </div>
     <div class="gallery" id="gallery"></div>
   </section>
@@ -454,7 +454,7 @@ $("copy").addEventListener("click", async () => {
 });
 
 // Gallery
-const cards = ["00","01","02","03","04","05","06","07","08","09","10"];
+const cards = Array.from({ length: 16 }, (_, i) => String(i).padStart(2, "0"));
 $("gallery").innerHTML = cards.map((c, i) => `<button type="button" data-src="cards/${c}.jpg" aria-label="${i ? `放大第 ${i} 張圖卡` : "放大封面圖卡"}"><img src="cards/${c}.jpg" alt="${i ? `提醒清單圖卡第 ${i} 張` : "提醒清單封面"}" loading="lazy"></button>`).join("");
 $("gallery").addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
