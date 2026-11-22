@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="《Raising Mentally Strong Kids》讀書筆記：可勾選的 130 項父母自我提醒清單、今日一提醒與圖卡。">
+<meta property="og:title" content="培養心理強大的孩子：130 項父母自我提醒清單">
+<meta property="og:description" content="這不是完美父母清單，而是可以時時回顧、提醒自己的清單。從幾項最有感的開始，就很好。">
+<meta property="og:image" content="https://ccc99188-oss.github.io/mentally-strong-kids/cards/00.jpg">
+<style>html{color-scheme:light}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>培養心理強大的孩子</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+/* Layout: one calm reading column (paper sheet) with a full-width hero; checklist grouped in 24 foldable sections. */
+:root {
+  --paper: #f6f3ea;
+  --sheet: #fbfaf5;
+  --ink: #2f3a2c;
+  --ink-soft: #5d6a58;
+  --sage: #3f5a3a;
+  --sage-mid: #7d9273;
+  --sage-wash: #e4eadb;
+  --line: #d9dccd;
+  --gold: #b08a4a;
+  --done: #4f7a46;
+  --serif: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --r: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #161b15; --sheet: #1d241c; --ink: #e6eadf; --ink-soft: #a9b5a2;
+    --sage: #b5cca8; --sage-mid: #8aa37e; --sage-wash: #263124; --line: #333f30;
+    --gold: #d2b072; --done: #9cc58f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #161b15; --sheet: #1d241c; --ink: #e6eadf; --ink-soft: #a9b5a2;
+  --sage: #b5cca8; --sage-mid: #8aa37e; --sage-wash: #263124; --line: #333f30;
+  --gold: #d2b072; --done: #9cc58f; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--sans); font-size: 16px; line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 760px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--serif); text-wrap: balance; margin: 0; color: var(--sage); }
+p { margin: 0; }
+a { color: var(--sage); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+
+/* Hero */
+.hero {
+  margin-top: calc(-1 * env(safe-area-inset-top, 0px));
+  padding-top: calc(env(safe-area-inset-top, 0px) + 3.5rem);
+  padding-bottom: 3rem;
+  background:
+    radial-gradient(60% 80% at 10% 0%, color-mix(in srgb, var(--sage-mid) 22%, transparent), transparent 70%),
+    radial-gradient(50% 70% at 100% 100%, color-mix(in srgb, var(--gold) 14%, transparent), transparent 70%),
+    var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.hero-grid { display: grid; grid-template-columns: 1fr 180px; gap: 2rem; align-items: center; }
+.eyebrow { font-size: .8rem; letter-spacing: .3em; color: var(--ink-soft); }
+.hero h1 { font-size: clamp(2.1rem, 7vw, 3.2rem); font-weight: 900; line-height: 1.25; margin: .6rem 0 .8rem; letter-spacing: .04em; }
+.hero .sub { font-family: var(--serif); font-size: 1.15rem; color: var(--ink); letter-spacing: .08em; }
+.hero .lede { margin-top: 1.2rem; color: var(--ink-soft); max-width: 34em; }
+.book { width: 100%; max-width: 180px; border-radius: 6px; box-shadow: 0 10px 30px rgba(30,40,25,.22); transform: rotate(2deg); }
+.cta-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }
+.btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font: 500 .95rem var(--sans); padding: .7rem 1.2rem; border-radius: 999px;
+  border: 1px solid var(--sage); background: var(--sage); color: var(--sheet);
+  text-decoration: none; cursor: pointer;
+}
+.btn.ghost { background: transparent; color: var(--sage); }
+.btn:hover { filter: brightness(1.08); }
+
+section { padding-block: 3rem; }
+.sec-head { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1.5rem; }
+.sec-head h2 { font-size: 1.6rem; }
+.sec-head p { color: var(--ink-soft); }
+
+/* Quote band */
+.quote {
+  background: var(--sage-wash); border-radius: var(--r);
+  padding: 1.8rem 1.6rem; display: grid; gap: .8rem;
+}
+.quote blockquote { margin: 0; font-family: var(--serif); font-size: 1.1rem; line-height: 1.9; }
+.quote cite { font-style: normal; color: var(--ink-soft); font-size: .9rem; }
+.points { display: grid; gap: 1rem; margin-top: 1.6rem; padding: 0; list-style: none; counter-reset: p; }
+.points li { display: grid; grid-template-columns: 2rem 1fr; gap: .6rem; }
+.points li::before {
+  counter-increment: p; content: counter(p);
+  font-family: var(--serif); font-weight: 700; color: var(--gold); font-size: 1.3rem; line-height: 1.5;
+}
+
+/* Today card */
+.today {
+  background: var(--sheet); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 2rem 1.6rem; text-align: center; position: relative;
+  box-shadow: 0 1px 0 var(--line), 0 18px 40px -28px rgba(30,40,25,.35);
+}
+.today .tag { font-size: .8rem; letter-spacing: .25em; color: var(--gold); }
+.today .num { font-family: var(--serif); color: var(--sage-mid); margin-top: .8rem; font-size: .95rem; }
+.today .text { font-family: var(--serif); font-size: clamp(1.25rem, 4.5vw, 1.55rem); line-height: 1.7; margin: .4rem auto 0; max-width: 24em; text-wrap: balance; }
+.today .cat { color: var(--ink-soft); font-size: .9rem; margin-top: .8rem; }
+.today .cta-row { justify-content: center; }
+
+/* Checklist */
+.toolbar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(6px);
+  padding-block: .8rem; border-bottom: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center; justify-content: space-between;
+}
+.progress { display: flex; align-items: center; gap: .7rem; flex: 1 1 240px; min-width: 0; }
+.bar { flex: 1; height: 8px; border-radius: 99px; background: var(--sage-wash); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; background: var(--done); transition: width .3s; }
+.progress b { font-variant-numeric: tabular-nums; font-weight: 500; font-size: .9rem; white-space: nowrap; }
+.filters { display: flex; gap: .4rem; }
+.chip {
+  font: 500 .85rem var(--sans); padding: .35rem .85rem; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--sheet); color: var(--ink-soft); cursor: pointer;
+}
+.chip[aria-pressed="true"] { background: var(--sage); color: var(--sheet); border-color: var(--sage); }
+
+.groups { display: grid; gap: .8rem; margin-top: 1.2rem; }
+details.group { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--r); }
+details.group > summary {
+  list-style: none; cursor: pointer; padding: 1rem 1.2rem;
+  display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center;
+}
+details.group > summary::-webkit-details-marker { display: none; }
+.g-no { font-family: var(--serif); color: var(--gold); font-weight: 700; min-width: 2.6em; }
+.g-title { font-family: var(--serif); font-weight: 700; color: var(--sage); font-size: 1.05rem; min-width: 0; }
+.g-count { font-size: .8rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.g-count.full { color: var(--done); font-weight: 700; }
+details.group[open] > summary { border-bottom: 1px dashed var(--line); }
+.items { list-style: none; margin: 0; padding: .4rem .6rem .8rem; }
+.item { display: grid; grid-template-columns: auto 1fr auto; gap: .7rem; align-items: start; padding: .55rem .6rem; border-radius: 10px; }
+.item:hover { background: var(--sage-wash); }
+.item input { width: 1.15rem; height: 1.15rem; margin-top: .35rem; accent-color: var(--done); cursor: pointer; }
+.item label { cursor: pointer; min-width: 0; }
+.item .n { font-variant-numeric: tabular-nums; color: var(--sage-mid); margin-right: .35rem; font-size: .9rem; }
+.item.is-done label { color: var(--ink-soft); }
+.star {
+  border: 0; background: none; cursor: pointer; font-size: 1.15rem; line-height: 1.6;
+  color: var(--line); padding: 0 .2rem;
+}
+.star[aria-pressed="true"] { color: var(--gold); }
+.empty { color: var(--ink-soft); text-align: center; padding: 2rem 1rem; }
+
+/* My picks */
+.picks { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--r); padding: 1.6rem; }
+.picks ol { margin: 1rem 0 0; padding-left: 1.4rem; display: grid; gap: .5rem; }
+.picks .hint { color: var(--ink-soft); }
+
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+.gallery button { border: 0; padding: 0; background: none; cursor: zoom-in; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 18px -10px rgba(30,40,25,.4); }
+.gallery img { display: block; width: 100%; aspect-ratio: 935 / 1663; object-fit: cover; }
+.lightbox {
+  position: fixed; inset: 0; z-index: 20; background: rgba(15,20,14,.88);
+  display: flex; align-items: center; justify-content: center;
+  padding: calc(env(safe-area-inset-top, 0px) + 16px) max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 16px) max(16px, env(safe-area-inset-left, 0px));
+}
+.lightbox img { max-height: 100%; max-width: 100%; border-radius: 8px; }
+.lightbox .close { position: absolute; top: calc(env(safe-area-inset-top, 0px) + 12px); right: max(12px, env(safe-area-inset-right, 0px)); }
+
+/* Book */
+.bookbox { display: grid; grid-template-columns: 140px 1fr; gap: 1.6rem; align-items: center; background: var(--sage-wash); border-radius: var(--r); padding: 1.6rem; }
+.bookbox img { border-radius: 6px; width: 100%; }
+.bookbox h3 { font-size: 1.15rem; font-family: var(--sans); font-style: italic; }
+.bookbox .by { color: var(--ink-soft); margin: .3rem 0 .8rem; font-size: .95rem; }
+
+footer { border-top: 1px solid var(--line); padding-block: 2.4rem 3rem; text-align: center; color: var(--ink-soft); font-size: .9rem; display: grid; gap: .5rem; }
+footer .motto { font-family: var(--serif); color: var(--sage); letter-spacing: .3em; font-size: 1rem; }
+
+@media (max-width: 560px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .book { max-width: 130px; order: -1; }
+  .bookbox { grid-template-columns: 90px 1fr; gap: 1rem; padding: 1.2rem; }
+  .today { padding: 1.6rem 1.1rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">讀書筆記整理</p>
+      <h1>培養心理強大的孩子</h1>
+      <p class="sub">130 項父母自我提醒清單</p>
+      <p class="lede">整理自精神科醫師 Daniel G. Amen 與兒童心理學家 Charles Fay 合著的 <i>Raising Mentally Strong Kids</i>。這不是完美父母清單，而是可以時時回顧、提醒自己的清單。從幾項最有感的開始，就很好。</p>
+      <div class="cta-row">
+        <a class="btn" href="#list">開始看清單</a>
+        <a class="btn ghost" href="#today">今日一提醒</a>
+      </div>
+    </div>
+    <img class="book" src="book.jpg" alt="Raising Mentally Strong Kids 原書封面">
+  </div>
+</header>
+
+<main>
+  <section class="wrap" id="why">
+    <div class="sec-head">
+      <h2>為什麼整理這份清單</h2>
+      <p>書裡把大腦科學、心理學和實際教養方法整理成清楚的方向。以下是讓我印象最深的五點。</p>
+    </div>
+    <ol class="points">
+      <li><p>許多父母低估了自己對孩子的影響力。</p></li>
+      <li><p>關係好，孩子需要幫助時會來找你；關係不好，他們就會轉向同儕或其他人尋求建議。</p></li>
+      <li><p>每天給孩子 20 分鐘的「特別時光」，陪他們做他們想做的事。當孩子感受到你的陪伴，會覺得自己很重要，自尊也會跟著提升。</p></li>
+      <li><p>注意孩子做對的事，要比注意做錯的事多十倍。這能幫助孩子看見自己好的部分，而不是長成一個習慣自我批判的人。</p></li>
+      <li><p>鼓勵孩子建立一座「美好回憶的心靈圖書館」，在低落時回想快樂時光，替自己打氣。</p></li>
+    </ol>
+    <div class="quote" style="margin-top:2rem">
+      <blockquote>這個世界上沒有完美的父母，我們也永遠不可能是。我們只有在成為父母的時候，才能學習怎麼當父母。這是一個持續的過程。</blockquote>
+      <cite>一位 80 歲的美國阿嬤 · It's an ongoing process.</cite>
+    </div>
+  </section>
+
+  <section class="wrap" id="today">
+    <div class="today" aria-live="polite">
+      <p class="tag">今日一提醒</p>
+      <p class="num" id="t-num"></p>
+      <p class="text" id="t-text"></p>
+      <p class="cat" id="t-cat"></p>
+      <div class="cta-row">
+        <button class="btn ghost" id="t-next" type="button">換一則</button>
+        <button class="btn ghost" id="t-star" type="button" aria-pressed="false">☆ 加入我的練習</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="list">
+    <div class="sec-head">
+      <h2>130 項提醒清單</h2>
+      <p>勾選已經做到的項目，按 ☆ 標出想先練習的。紀錄只存在你自己的瀏覽器裡。</p>
+    </div>
+    <div class="toolbar">
+      <div class="progress">
+        <div class="bar" aria-hidden="true"><i id="bar"></i></div>
+        <b id="count">已做到 0 / 130</b>
+      </div>
+      <div class="filters" role="group" aria-label="篩選">
+        <button class="chip" type="button" data-f="all" aria-pressed="true">全部</button>
+        <button class="chip" type="button" data-f="todo" aria-pressed="false">還沒做到</button>
+        <button class="chip" type="button" data-f="star" aria-pressed="false">☆ 我的練習</button>
+      </div>
+    </div>
+    <div class="groups" id="groups"></div>
+  </section>
+
+  <section class="wrap" id="picks">
+    <div class="picks">
+      <h2 style="font-size:1.4rem">我的練習清單</h2>
+      <p class="hint" id="picks-hint">還沒有標記。在清單裡按 ☆，挑 3 到 5 項你最想先做的。</p>
+      <ol id="picks-list" hidden></ol>
+      <div class="cta-row" id="picks-actions" hidden>
+        <button class="btn ghost" id="copy" type="button">複製文字</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="cards">
+    <div class="sec-head">
+      <h2>圖卡版</h2>
+      <p>同一份清單的 10 張圖卡，點開可放大。手機上長按圖片即可儲存或轉傳。</p>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </section>
+
+  <section class="wrap" id="book">
+    <div class="bookbox">
+      <img src="book.jpg" alt="Raising Mentally Strong Kids 原書封面">
+      <div>
+        <h3>Raising Mentally Strong Kids</h3>
+        <p class="by">Daniel G. Amen, MD &amp; Charles Fay, PhD</p>
+        <p>想更深入了解每一項背後的原因，推薦閱讀原書。</p>
+        <div class="cta-row">
+          <a class="btn" href="https://www.amazon.com/s?k=Raising+Mentally+Strong+Kids+Daniel+Amen+Charles+Fay" target="_blank" rel="noopener">在 Amazon 查看</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap" style="display:grid;gap:.5rem">
+    <p class="motto">理解過去・活在當下・陪伴成長・成就未來</p>
+    <p>本頁為個人讀書筆記整理，非原書官方內容。中文為整理者的意譯。</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb" hidden>
+  <button class="btn close" id="lb-close" type="button">關閉</button>
+  <img id="lb-img" alt="">
+</div>
+
+<script>
+const DATA = [
+  ["記得自己也曾經是孩子", ["我願意記得自己小時候的感受，幫助自己更同理孩子。","我記得父母太忙、沒時間理我時的感覺。","我記得自己小時候說謊時的心情，也思考希望父母如何回應。","我記得父母吵架時，自己內心的感受。","我記得父母曾帶我去特別地方時，那種被重視的感覺。","我願意回想自己小時候的用餐經驗，並思考那對我有什麼影響。","我願意回想自己小時候睡前的感受。","我記得第一次約會或被約出去時，那種焦慮與興奮。","我願意記得自己小時候與青春期對性的感受與困惑。","我記得自己遇過最糟糕的老師，因此更能理解孩子對學校的抱怨。","我也記得自己遇過最好的老師，並願意讓孩子知道學校也可能很美好。"]],
+  ["為自己與孩子訂下明確目標", ["我有為教養寫下明確目標，並定期檢視自己的行為是否與目標一致。"]],
+  ["作為父母，我想成為孩子生命中的正向力量", ["我有實際參與孩子的生活，而不是只在旁邊觀看。","我願意用開放、傾聽與同理的方式和孩子互動。","我能在孩子尚未成熟前，提供適當的界線與監督。","我願意成為好的共同教養者，和另一位照顧者互相支持。","我提醒自己要仁慈，用孩子長大後還願意親近我的方式教養他。","我願意和孩子一起玩、一起笑，讓家裡有輕鬆與快樂。"]],
+  ["我希望孩子慢慢發展出的能力", ["我有幫助孩子學習如何建立良好的人際關係。","我有培養孩子的責任感，而不是讓他習慣把問題都怪給別人。","我有給孩子適度選擇權，培養他的獨立性。","我有鼓勵孩子嘗試活動，從能力與成就中建立自信。","我有多看見孩子的正向行為，幫助他接納自己。","我有讓孩子接觸不同情境，培養適應力與韌性。","我願意提供接納的環境，讓孩子能表達情緒；必要時尋求專業協助。","我有教孩子如何玩樂與笑。","我有幫助孩子學習設定短期與長期目標。"]],
+  ["友善而堅定的權威", ["我理解家庭需要適當的權威、秩序與結構。","我知道對孩子堅定，不等於苛刻。","我願意相信自己需要在親子關係中承擔成熟的引導角色。","我嘗試用友善的方式建立權威，讓孩子清楚知道界線在哪裡。","我知道健康的權威能幫助孩子未來更好地面對外在權威。","我努力說話算話，不因內疚而輕易放棄重要原則。"]],
+  ["親子關係是成功教養的關鍵", ["我重視與孩子之間的親密關係，知道這會影響他的情緒健康。","我知道關係良好時，管教才更容易發揮效果。","我在家裡也努力像尊重外人一樣尊重孩子。","我願意每天花一段特別時間，陪孩子做他想做的事。","我先聽懂孩子的想法，再分享自己的意見。","我和孩子說話時，願意蹲下來進入他的視線高度。","我提醒自己用溫柔的語氣和孩子說話。","我盡量避免對孩子吼叫。","我對孩子信守承諾。","我注意自己與伴侶或共同照顧者的互動，因為孩子正在學習關係。"]],
+  ["創造充滿愛與支持的家庭環境", ["我每天都讓孩子知道我愛他。","我每天用擁抱、牽手、拍拍肩膀等方式溫柔觸碰孩子。","我每天與孩子有眼神接觸，並問問他今天過得如何。","當孩子靠近我時，我願意停下來抱抱他。","我願意了解孩子正在聽什麼音樂、接收什麼訊息。","我有適度限制電視、電玩、社群媒體與平板的使用。","我避免讓孩子接觸過多令人恐懼或焦慮的新聞。","我透過睡前、用餐、節慶等日常儀式，給孩子穩定感。","我願意帶孩子嘗試不同經驗，即使他一開始有些猶豫。","我有和孩子一起玩遊戲，讓生活保持平衡與快樂。"]],
+  ["清楚的期待與家庭規則", ["我對孩子的行為有清楚期待，並讓家庭規則具體可見。"]],
+  ["多注意孩子做對的事", ["當孩子遵守規則或表現良好時，我會讓他知道我看見了。","我提醒自己多看見孩子喜歡的行為，而不是只盯著問題。","我用讚美與鼓勵幫助孩子學習，而不是只靠憤怒與處罰。","我知道鼓勵能強化親子連結，憤怒則可能削弱關係。"]],
+  ["紀律是為了教導，不是發洩情緒", ["我避免一件事講十遍，而是讓孩子知道第一次聽見就需要回應。","當我情緒失控時，我先讓自己冷靜，而不是立刻教訓孩子。","我使用紀律來教導孩子，而不是懲罰或發洩情緒。","我把孩子的不當行為視為可以解決的問題，而不是故意挑釁。","我為破壞規則的行為設計迅速、明確、平靜執行的後果。","我提醒自己：堅定而友善，像釘子一樣硬，像小羊一樣溫柔。","當孩子陷入負面行為時，我會先轉移注意力，稍後再處理問題。","對於說謊與偷竊，我會立刻面對與處理。","面對性、毒品、不敬等困難議題時，我不逃避，而是友善且堅定地引導。","我避免體罰或其他形式的肢體懲罰。"]],
+  ["給孩子適當選擇權", ["我給孩子在幾個選項中做選擇，而不是所有事情都替他決定。","我鼓勵孩子根據自己的理解做決定，而不是盲目跟隨朋友。"]],
+  ["適度監督孩子的生活", ["我參與孩子的學校生活，了解老師與班級狀況。","我知道孩子在哪裡、和誰在一起、在做什麼、什麼時候回家。","我讓孩子知道，自由來自於過往累積出的信任。","我願意花時間認識孩子的朋友，了解他們對孩子的影響。"]],
+  ["父母之間的支持", ["即使關係不容易，我也願意和共同照顧者合作支持孩子。","我避免讓孩子在父母之間分化權威。","我知道父母也需要休息與保留自己的時間。","我努力讓孩子看見父母或照顧者之間有愛與尊重的互動。"]],
+  ["保護孩子的自尊", ["我小心自己稱呼孩子的綽號與詞語，避免讓孩子活成負面標籤。","我提醒自己，孩子的自尊比作業品質更重要。","我鼓勵孩子投入感興趣的領域，從能力中建立自我肯定。"]],
+  ["用生活教導孩子", ["我用自己的行為傳遞價值觀，而不只是說教。","我願意從自己的真實人生經驗中教導孩子。","我願意主動和孩子談性與毒品，而不是把責任丟給學校或網路。","我幫助孩子從錯誤中學習，而不是羞辱或貶低他。","我讓家裡多保留健康食物，幫助孩子學會喜歡真正滋養他的食物。","我和孩子一起運動，幫助他養成活動習慣。","我教孩子注意生活中美好的事物。","我教孩子理解生命有開始也有結束，並思考靈性健康的重要性。","我教孩子為自己想像好的未來。","我不讓孩子習慣把人生問題都怪罪給別人。","我教孩子寫感謝卡或感謝信。","我教孩子組織與整理生活的能力。","我常常為孩子朗讀，或讓孩子讀給我聽。","我教孩子負責任地使用科技，並設定使用時間限制。"]],
+  ["工作與責任", ["我不讓孩子要什麼就立刻得到，而是讓他學習透過努力取得想要的東西。","我知道工作與家事對孩子是好事，替他做完所有事反而不是幫助。"]],
+  ["兄弟姊妹關係", ["我鼓勵並肯定兄弟姊妹之間尊重、照顧與合作的行為。","我理解某種程度的手足競爭是正常的，但仍需要適度引導。"]],
+  ["朋友與同儕", ["當孩子和朋友衝突時，我不急著替他出面打仗，而是成為他的顧問。","我創造安全舒適的家庭環境，讓孩子願意帶朋友回家。"]],
+  ["當孩子遇到問題時", ["當孩子出現心理健康、學習或腦部功能困難時，我願意尋求協助。","我不把問題掃到地毯下，而是教孩子談論自己的掙扎。","當我犯錯時，我願意向孩子道歉。","我幫助孩子看見自己的優點，而不只是盯著障礙與弱點。"]],
+  ["了解孩子不同階段的正常發展", ["在孩子前額葉尚未成熟前，我願意暫時扮演外在前額葉的角色。","我願意了解不同年齡階段的正常發展特徵。","當青少年開始疏遠我時，我用溫柔靠近，而不是用憤怒追擊。","面對 18 歲左右的孩子，我少用命令，多用建議、傾聽與討論。"]],
+  ["持續學習如何當父母", ["我知道有效教養是一種可以學會的技能。","我願意持續學習新技能，走出舒適圈，讓自己的大腦保持彈性。"]],
+  ["大腦保健介入", ["孩子騎腳踏車、滑板、直排輪或做高風險活動時，我會提醒他戴安全帽。","孩子搭車時，我會確保他繫安全帶。","我提供均衡飲食，避免過多精緻糖與簡單碳水化合物。","我教孩子辨識自動化負面想法，培養健康而準確的思考。","我每天鼓勵孩子注意值得感恩的事。","我睡前問孩子：「今天發生了哪些好事？」","我幫助孩子擁有充足睡眠。","我可以適度使用舒緩香氣，營造放鬆與安定的環境。","我和孩子一起建立美好回憶，讓他低落時能回想快樂時光。","我和孩子一起用餐，讓他看見我享受健康食物與家庭連結。"]],
+  ["促進情緒健康", ["我教孩子深呼吸，幫助他平靜下來、調節情緒與焦慮。","我幫助孩子探索人生目的與熱情。","我有機會就和孩子一起唱歌或哼歌。","我讓美好的音樂成為孩子生活的一部分。","我確保孩子定期接受健康與牙齒檢查。","我避免讓孩子攝取咖啡因。"]],
+  ["避免傷害大腦的行為", ["我避免在孩子面前喝太多酒，也不在孩子面前使用非法藥物。","我避免讓孩子參與容易頭部受傷的接觸性運動，並避免用頭頂足球。","當孩子因挫折而用頭撞東西時，我會制止，並教他愛護自己的大腦。"]]
+];
+const CN = ["一","二","三","四","五","六","七","八","九","十","十一","十二","十三","十四","十五","十六","十七","十八","十九","二十","二十一","二十二","二十三","二十四"];
+
+const ITEMS = []; // {n, text, g}
+DATA.forEach(([t, list], g) => list.forEach(text => ITEMS.push({ n: ITEMS.length + 1, text, g })));
+const TOTAL = ITEMS.length;
+
+const load = k => { try { return new Set(JSON.parse(localStorage.getItem(k) || "[]")); } catch { return new Set(); } };
+const save = (k, s) => { try { localStorage.setItem(k, JSON.stringify([...s])); } catch {} };
+const done = load("rmsk-done");
+const stars = load("rmsk-star");
+let filter = "all";
+
+const $ = id => document.getElementById(id);
+const groupsEl = $("groups");
+
+function render() {
+  groupsEl.innerHTML = "";
+  let shown = 0;
+  DATA.forEach(([title], g) => {
+    const items = ITEMS.filter(it => it.g === g).filter(it =>
+      filter === "all" || (filter === "todo" && !done.has(it.n)) || (filter === "star" && stars.has(it.n)));
+    if (!items.length) return;
+    shown += items.length;
+    const all = ITEMS.filter(it => it.g === g);
+    const c = all.filter(it => done.has(it.n)).length;
+    const d = document.createElement("details");
+    d.className = "group";
+    d.open = filter !== "all" || g === 0;
+    d.innerHTML = `<summary><span class="g-no">${CN[g]}、</span><span class="g-title">${DATA[g][0]}</span><span class="g-count${c === all.length ? " full" : ""}">${c} / ${all.length}</span></summary>`;
+    const ul = document.createElement("ul");
+    ul.className = "items";
+    items.forEach(it => {
+      const li = document.createElement("li");
+      li.className = "item" + (done.has(it.n) ? " is-done" : "");
+      li.innerHTML = `<input type="checkbox" id="c${it.n}" ${done.has(it.n) ? "checked" : ""}>
+        <label for="c${it.n}"><span class="n">${it.n}.</span>${it.text}</label>
+        <button class="star" type="button" aria-label="標記第 ${it.n} 項為我的練習" aria-pressed="${stars.has(it.n)}">${stars.has(it.n) ? "★" : "☆"}</button>`;
+      li.querySelector("input").addEventListener("change", e => {
+        e.target.checked ? done.add(it.n) : done.delete(it.n);
+        save("rmsk-done", done); refresh(false);
+        li.classList.toggle("is-done", e.target.checked);
+        const cnt = d.querySelector(".g-count");
+        const cc = all.filter(x => done.has(x.n)).length;
+        cnt.textContent = `${cc} / ${all.length}`; cnt.classList.toggle("full", cc === all.length);
+      });
+      li.querySelector(".star").addEventListener("click", e => {
+        toggleStar(it.n);
+        e.currentTarget.setAttribute("aria-pressed", stars.has(it.n));
+        e.currentTarget.textContent = stars.has(it.n) ? "★" : "☆";
+      });
+      ul.appendChild(li);
+    });
+    d.appendChild(ul);
+    groupsEl.appendChild(d);
+  });
+  if (!shown) groupsEl.innerHTML = `<p class="empty">${filter === "star" ? "還沒有標記任何項目。按每一項右邊的 ☆ 加入。" : "全部都做到了，太棒了！"}</p>`;
+}
+
+function toggleStar(n) {
+  stars.has(n) ? stars.delete(n) : stars.add(n);
+  save("rmsk-star", stars);
+  refresh(false);
+}
+
+function refresh(full = true) {
+  const c = done.size;
+  $("count").textContent = `已做到 ${c} / ${TOTAL}`;
+  $("bar").style.width = (c / TOTAL * 100) + "%";
+  const list = [...stars].sort((a, b) => a - b);
+  $("picks-hint").hidden = list.length > 0;
+  $("picks-list").hidden = $("picks-actions").hidden = !list.length;
+  $("picks-list").innerHTML = list.map(n => `<li value="${n}">${ITEMS[n - 1].text}</li>`).join("");
+  updateTodayStar();
+  if (full) render();
+}
+
+// Today
+let todayIdx = (() => { const d = new Date(); return (d.getFullYear() * 372 + d.getMonth() * 31 + d.getDate()) % TOTAL; })();
+function showToday() {
+  const it = ITEMS[todayIdx];
+  $("t-num").textContent = `第 ${it.n} 項`;
+  $("t-text").textContent = it.text;
+  $("t-cat").textContent = `${CN[it.g]}、${DATA[it.g][0]}`;
+  updateTodayStar();
+}
+function updateTodayStar() {
+  const on = stars.has(ITEMS[todayIdx].n);
+  $("t-star").setAttribute("aria-pressed", on);
+  $("t-star").textContent = on ? "★ 已加入我的練習" : "☆ 加入我的練習";
+}
+$("t-next").addEventListener("click", () => {
+  let n; do { n = Math.floor(Math.random() * TOTAL); } while (n === todayIdx);
+  todayIdx = n; showToday();
+});
+$("t-star").addEventListener("click", () => { toggleStar(ITEMS[todayIdx].n); render(); });
+
+// Filters
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  filter = b.dataset.f;
+  document.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+}));
+
+// Copy picks
+$("copy").addEventListener("click", async () => {
+  const text = "我的練習清單（培養心理強大的孩子）\n" + [...stars].sort((a, b) => a - b).map(n => `${n}. ${ITEMS[n - 1].text}`).join("\n");
+  const btn = $("copy");
+  try { await navigator.clipboard.writeText(text); btn.textContent = "已複製"; }
+  catch {
+    const r = document.createRange(); r.selectNodeContents($("picks-list"));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    btn.textContent = "已選取，請按複製";
+  }
+  setTimeout(() => btn.textContent = "複製文字", 2000);
+});
+
+// Gallery
+const cards = ["00","01","02","03","04","05","06","07","08","09","10"];
+$("gallery").innerHTML = cards.map((c, i) => `<button type="button" data-src="cards/${c}.jpg" aria-label="${i ? `放大第 ${i} 張圖卡` : "放大封面圖卡"}"><img src="cards/${c}.jpg" alt="${i ? `提醒清單圖卡第 ${i} 張` : "提醒清單封面"}" loading="lazy"></button>`).join("");
+$("gallery").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  $("lb-img").src = b.dataset.src; $("lb-img").alt = b.querySelector("img").alt; $("lb").hidden = false; $("lb-close").focus();
+});
+const closeLb = () => { $("lb").hidden = true; };
+$("lb-close").addEventListener("click", closeLb);
+$("lb").addEventListener("click", e => { if (e.target.id === "lb") closeLb(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeLb(); });
+
+showToday();
+refresh();
+</script>
+</body>
+</html>
